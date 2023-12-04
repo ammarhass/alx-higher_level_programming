@@ -9,13 +9,12 @@ class BaseGeometry
 class BaseGeometry:
     """BaseGeometry class"""
 
-    @classmethod
+
     def area(self):
         """function to get the area"""
 
         raise Exception("area() is not implemented")
 
-    @classmethod
     def integer_validator(self, name, value):
         """function to check the validation of an integer"""
 
