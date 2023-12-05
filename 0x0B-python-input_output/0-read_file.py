@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""comment"""
+"""define a function"""
 
 
 def read_file(filename=""):
