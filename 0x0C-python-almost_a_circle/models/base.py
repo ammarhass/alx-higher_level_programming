@@ -32,8 +32,9 @@ class Base:
             if list_objs is None:
                 file_j.write("[]")
             else:
-                l = [i.to_dictionary() for i in list_objs]
-                file_j.write(Base.to_json_string(l))
+                List = [i.to_dictionary() for i in list_objs]
+                file_j.write(Base.to_json_string(List))
+
     @classmethod
     def create(cls, **dictionary):
         """method that returns an instance with all attributes already set"""

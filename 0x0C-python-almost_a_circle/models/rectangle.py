@@ -2,6 +2,7 @@
 """Define a Rectangle class"""
 from models.base import Base
 
+
 class Rectangle(Base):
     """a Rectanble class"""
 
@@ -35,7 +36,7 @@ class Rectangle(Base):
             raise TypeError("height must be an integer")
         if value <= 0:
             raise ValueError("height must be > 0")
-        self.__height = value\
+        self.__height = value
 
     @property
     def x(self):
@@ -67,7 +68,7 @@ class Rectangle(Base):
 
     def display(self):
         """prints "#" in the stdout"""
-        [print("") for l in range(self.y)]
+        [print("") for p in range(self.y)]
         for i in range(self.height):
             [print(" ", end="") for z in range(self.x)]
             [print("#", end="") for j in range(self.width)]
@@ -75,7 +76,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """magic method"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+                self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args, **kwargs):
         """update the class instance attribute"""
@@ -111,7 +113,7 @@ class Rectangle(Base):
                 elif key == "x":
                     self.x = value
                 elif key == "y":
-                     self.y = value
+                    self.y = value
 
     def to_dictionary(self):
         """method that returns the dictionay representation of a Rectangle"""
@@ -120,5 +122,5 @@ class Rectangle(Base):
                 'y': self.y,
                 'id': self.id,
                 'height': self.height,
-                'width' :self.width
+                'width': self.id
                 }
