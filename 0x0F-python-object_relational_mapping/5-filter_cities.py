@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""list all cities from hbtn_0c_0_usa"""
+
 
 import MySQLdb
 from sys import argv
