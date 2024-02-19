@@ -13,9 +13,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    n_state = State(name='Cairo')
+    n_state = State(name='Louisiana')
     session.add(n_state)
-    state = session.query(State).filter(State.name == 'Cairo').first()
+    state = session.query(State).filter(State.name == 'Louisiana').first()
     if state:
         print(state.id)
     session.close()
